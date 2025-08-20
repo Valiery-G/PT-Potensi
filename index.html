@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id" class="overflow-x-hidden">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PT. Potensi Karya Mandiri</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .light-mode {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .light-mode .bg-gray-800 { background-color: #e2e2e2; }
+    .light-mode .bg-gray-900 { background-color: #f3f4f6; }
+    .light-mode .bg-gray-700 { background-color: #d1d5db; }
+    .light-mode .text-gray-200 { color: #333; }
+    .light-mode .text-gray-300 { color: #555; }
+    .light-mode .text-gray-400 { color: #666; }
+    .light-mode .border-gray-600 { border-color: #ccc; }
+    .light-mode .bg-gradient-to-r {
+      background: linear-gradient(to right, #f3f4f6, #e2e2e2);
+    }
+    .light-mode .text-white { color: #333; }
+
+    .light-mode a.bg-green-600,
+.light-mode button.bg-green-600 {
+  background-color: #d1d5db; /* abu-abu terang */
+  color: #333;
+}
+
+.light-mode a.bg-green-600:hover,
+.light-mode button.bg-green-600:hover {
+  background-color: #9ca3af; /* abu-abu sedikit lebih gelap saat hover */
+  color: #111;
+}
+  </style>
+  <link rel="website icon" href="logopt.png" type="png">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans overflow-x-hidden">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-800 shadow fixed w-full z-50 top-0 left-0">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="logopt.png" alt="Logo" class="h-5 w-auto mr-2 md:h-8" />
+        <a href="index.html" class="hidden md:block font-bold text-sm md:text-lg" style="color:#7CE609;">PT. POTENSI KARYA MANDIRI</a>
+      </div>
+      <div class="flex items-center space-x-2">
+        <!-- Ganti tombol mode -->
+        <button id="mode-toggle" class="bg-gray-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
+        <span id="mode-text">Mode Terang</span>
+      </button>
+        <button id="mobile-menu-button" class="md:hidden text-white text-2xl">☰</button>
+      </div>
+      <ul class="hidden md:flex space-x-4 text-xs md:text-sm">
+        <li><a href="index.html" class="text-gray-300 hover:text-green-400 transition">Home</a></li>
+        <li><a href="galeri.html" class="text-gray-300 hover:text-green-400 transition">Galeri</a></li>
+        <li><a href="sertifikat.html" class="text-gray-300 hover:text-green-400 transition">Sertifikat</a></li>
+        <li><a href="clients.html" class="text-gray-300 hover:text-green-400 transition">Klien</a></li>
+        <li><a href="deals.html" class="text-gray-300 hover:text-green-400 transition">Deals</a></li>
+        <li><a href="partner.html" class="text-gray-300 hover:text-green-400 transition">Partner</a></li>
+      </ul>
+    </div>
+    <ul id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 text-sm space-y-2">
+      <li><a href="index.html" class="block text-gray-300 hover:text-green-400 transition">Home</a></li>
+      <li><a href="galeri.html" class="block text-gray-300 hover:text-green-400 transition">Galeri</a></li>
+      <li><a href="sertifikat.html" class="block text-gray-300 hover:text-green-400 transition">Sertifikat</a></li>
+      <li><a href="clients.html" class="block text-gray-300 hover:text-green-400 transition">Klien</a></li>
+      <li><a href="deals.html" class="block text-gray-300 hover:text-green-400 transition">Deals</a></li>
+      <li><a href="partner.html" class="block text-gray-300 hover:text-green-400 transition">Partner</a></li>
+    </ul>
+  </nav>
+  <div class="pt-20"></div>
+
+  <!-- Hero -->
+  <section class="h-auto flex flex-col md:flex-row items-center justify-between bg-gradient-to-r from-gray-800 to-gray-900 px-4 md:px-20 py-10 md:py-20 overflow-x-hidden max-w-screen">
+    <div class="max-w-xl" data-aos="fade-right">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">Solusi Digital dan Industri Modern</h1>
+      <p class="text-lg mb-6">Kami membantu bisnis Anda berkembang dengan solusi kreatif dan teknologi terbaru.</p>
+      <a href="#about" class="bg-green-600 text-white px-6 py-3 rounded shadow hover:bg-green-700 transition">Pelajari Lebih Lanjut</a>
+    </div>
+    <div class="hidden md:block" data-aos="fade-left">
+      <div class="relative w-full h-64 bg-gray-700 rounded-lg overflow-hidden max-w-md">
+        <div class="absolute inset-0 bg-green-500 opacity-50"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <h2 class="text-4xl font-bold text-white">Inovasi</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tentang Kami -->
+<section id="about" class="py-20 px-4 md:px-20 bg-gray-900 max-w-screen overflow-x-hidden">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+    
+    <!-- Teks -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Tentang Kami</h2>
+      <p class="text-lg text-gray-300 leading-relaxed mb-4">
+        Kami adalah perusahaan yang bergerak di bidang <span class="font-semibold" style="color:#7ce609 ;">digital transformasi, 
+        software development, desain,</span> dan <span class="font-semibold" style="color:#7ce609 ;">kreasi konten</span> yang berlokasi di kota Medan. 
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed mb-4">
+        Dengan fokus pada inovasi, kami bertujuan untuk membantu klien meningkatkan efisiensi 
+        dalam menjalankan bisnis serta memberikan nilai tambah yang akurat sesuai kebutuhan.
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        Didukung oleh tim profesional yang berdedikasi, kami percaya dapat menjadi mitra strategis 
+        dalam mendukung transformasi digital dan pertumbuhan bisnis secara berkelanjutan.
+      </p>
+    </div>
+
+    <!-- Gambar -->
+    <div class="flex justify-center">
+      <img src="WhatsApp Image 2025-08-19 at 11.43.59_23bd1b38.jpg" alt="Gedung PT Potensi Karya Mandiri" 
+           class="rounded-2xl shadow-lg w-full max-w-md md:max-w-full object-cover" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- Services -->
+    <!-- Services -->
+  <section id="services" class="py-20 px-4 md:px-20 bg-gray-800 max-w-screen overflow-x-hidden">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Layanan Kami</h2>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+      <!-- Web Design -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon monitor -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4h18v12H3zM7 20h10M12 16v4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Web Design</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Website modern, cepat, dan responsif dengan fokus pada UI/UX yang nyaman.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">UI/UX</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">SEO-Friendly</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Landing Page</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Apps -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon smartphone -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <rect x="7" y="2" width="10" height="20" rx="2" ry="2" stroke-width="1.5"/>
+                <path d="M11 18h2" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Mobile Apps</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Pengembangan aplikasi Android & iOS yang ringan, aman, dan mudah dikembangkan.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Android/iOS</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">API Ready</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Scalable</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphic Design -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon palette -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 3a9 9 0 100 18h1.5a2.5 2.5 0 100-5H12a4 4 0 01-4-4 4 4 0 014-4h1"/>
+                <circle cx="7.5" cy="10" r="1" fill="currentColor"/>
+                <circle cx="9.5" cy="6.5" r="1" fill="currentColor"/>
+                <circle cx="14.5" cy="6" r="1" fill="currentColor"/>
+                <circle cx="16.5" cy="10" r="1" fill="currentColor"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Graphic Design</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Identitas visual yang konsisten: logo, materi promosi, hingga kemasan.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Branding</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Poster & Feed</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Packaging</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Marketing -->
+      <div class="group relative rounded-xl p-[1px] bg-gradient-to-br from-green-500 to-emerald-500 hover:shadow-2xl transition-transform transform hover:-translate-y-1" data-aos="fade-up" data-aos-delay="250">
+        <div class="bg-gray-700 rounded-xl p-6 h-full">
+          <div class="flex items-center space-x-3 mb-4">
+            <!-- icon megaphone/chart -->
+            <div class="p-3 rounded-lg bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M3 10l10-4v12L3 14V10zM13 6l5-2v16l-5-2M7 15v4a2 2 0 002 2h1"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold">Digital Marketing</h3>
+          </div>
+          <p class="text-gray-300 mb-4">Strategi data-driven untuk meningkatkan trafik, leads, dan konversi.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">SEO/SEM</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Social Ads</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-800 text-gray-300">Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Project Kami -->
+<section id="projects" class="py-20 px-4 md:px-20 bg-gray-800 max-w-screen overflow-x-hidden">
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-white">Project Kami</h2>
+    
+    <!-- Grid Project -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+      
+      <!-- Card Project -->
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <!-- Gambar -->
+        <img src="arifa.png" alt="Project 1" 
+             class="w-full h-56 object-cover" />
+        
+        <!-- Overlay Gelap (pakai hex + opacity) -->
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition duration-300"></div>
+        
+        <!-- Teks -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Arifa Medikal Klinik</h3>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <img src="kangsayyour.png" alt="Project 2" 
+             class="w-full h-56 object-cover" />
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition duration-300"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Kang Sayyour</h3>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <img src="anak2u.png" alt="Project 3" 
+             class="w-full h-56 object-cover" />
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition duration-300"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Anak2U</h3>
+        </div>
+      </div>
+
+      <div class="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer transform hover:scale-105 transition duration-300">
+        <img src="annajah.jpeg" alt="Project 4" 
+             class="w-full h-56 object-cover" />
+        <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition duration-300"></div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+          <h3 class="text-xl font-bold text-white">Annajah Language Center</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Contact -->
+  <section id="contact" class="py-20 px-4 md:px-20 bg-gray-900 max-w-screen overflow-x-hidden">
+    <h2 class="text-3xl font-bold mb-10 text-center" data-aos="fade-up">Hubungi Kami</h2>
+    <div class="grid md:grid-cols-2 gap-12">
+      
+      <!-- Form -->
+      <form class="space-y-6 bg-gray-800 p-6 rounded-xl shadow-lg" data-aos="fade-right" onsubmit="return validateForm()" action="#" method="POST">
+        <input type="text" id="name" placeholder="Nama" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-900 text-gray-200 focus:ring-2 focus:ring-green-500 outline-none" required />
+        <input type="email" id="email" placeholder="Email" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-900 text-gray-200 focus:ring-2 focus:ring-green-500 outline-none" required />
+        <textarea id="message" placeholder="Pesan" rows="5" class="w-full border border-gray-600 rounded px-4 py-3 bg-gray-900 text-gray-200 focus:ring-2 focus:ring-green-500 outline-none" required></textarea>
+        <button type="submit" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition font-semibold">Kirim Pesan</button>
+      </form>
+
+      <!-- Info & Social -->
+      <div class="flex flex-col justify-between" data-aos="fade-left">
+        <div class="bg-gray-800 p-6 rounded-xl shadow-lg mb-6">
+          <h3 class="text-xl font-semibold mb-4">Kontak Langsung</h3>
+          <p class="text-gray-300 mb-2">PT Potensi Karya Mandiri</p>
+          <p class="text-gray-400 mb-2">Jl. Menteng VII, Komplek Citra Menteng, No.B12 Medan, North Sumatera, 20228</p>
+          <p class="text-gray-400 mb-4">Telp: +62 812 3456 7890</p>
+
+          <h4 class="font-semibold mb-2">Ikuti Kami:</h4>
+          <div class="flex space-x-4">
+            <!-- Instagram -->
+            <a href="https://instagram.com/" target="_blank" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-pink-400 hover:text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H7c-1.65 0-3-1.35-3-3V7c0-1.65 1.35-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm4.5-.25a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
+              </svg>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://linkedin.com/" target="_blank" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-blue-400 hover:text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zm7.5-11h4.7v1.7h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.8V24h-5v-7.3c0-1.7-.03-3.9-2.4-3.9-2.4 0-2.8 1.8-2.8 3.8V24h-5V13z"/>
+              </svg>
+            </a>
+            <!-- Facebook -->
+            <a href="https://facebook.com/" target="_blank" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-blue-500 hover:text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.8h2.6l-.4 3h-2.2v7A10 10 0 0022 12z"/>
+              </svg>
+            </a>
+            <!-- Email -->
+            <a href="mailto:info@potensikarya.co.id" class="hover:scale-110 transition">
+              <svg class="w-7 h-7 text-green-400 hover:text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Maps -->
+        <iframe class="w-full h-72 rounded-xl shadow-lg" src="https://maps.google.com/maps?q=PT%20Potensi%20Karya%20Mandiri%20Medan&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-200 py-6 mt-10 max-w-screen overflow-x-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center">
+      <p class="text-sm text-center mb-4">&copy; 2025 All rights reserved.</p>
+      <div class="flex flex-wrap justify-center space-x-4">
+        <a href="index.html" class="hover:underline transition duration-200">Home</a>
+        <a href="galeri.html" class="hover:underline transition duration-200">Galeri</a>
+        <a href="sertifikat.html" class="hover:underline transition duration-200">Sertifikat</a>
+        <a href="clients.html" class="hover:underline transition duration-200">Klien</a>
+        <a href="deals.html" class="hover:underline transition duration-200">Deals</a>
+        <a href="partner.html" class="hover:underline transition duration-200">Partner</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      if (!name || !email || !message) {
+        alert('Semua field harus diisi!');
+        return false;
+      }
+      return true;
+    }
+
+    const modeToggle = document.getElementById('mode-toggle');
+    const body = document.body;
+    const modeText = document.getElementById('mode-text');
+
+    // load theme awal
+    if (localStorage.getItem('theme') === 'light') {
+      body.classList.add('light-mode');
+      modeText.textContent = 'Mode Gelap';
+    } else {
+      modeText.textContent = 'Mode Terang';
+    }
+
+    // ganti mode
+    modeToggle.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      if (body.classList.contains('light-mode')) {
+        modeText.textContent = 'Mode Gelap';
+        localStorage.setItem('theme', 'light');
+      } else {
+        modeText.textContent = 'Mode Terang';
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+
+    // toggle menu mobile
+    document.getElementById("mobile-menu-button").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sertifikat - Green Company</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .light-mode {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .light-mode .bg-gray-800 { background-color: #e2e2e2; }
+    .light-mode .bg-gray-900 { background-color: #f3f4f6; }
+    .light-mode .bg-gray-700 { background-color: #d1d5db; }
+    .light-mode .text-gray-200 { color: #333; }
+    .light-mode .text-gray-300 { color: #555; }
+    .light-mode .text-gray-400 { color: #666; }
+    .light-mode .border-gray-600 { border-color: #ccc; }
+    .light-mode .bg-gradient-to-r {
+      background: linear-gradient(to right, #f3f4f6, #e2e2e2);
+    }
+    .light-mode .text-white { color: #333; }
+  </style>
+  <link rel="website icon" href="logopt.png" type="png">
+</head>
+<body class="bg-gray-900 text-gray-200 font-sans">
+    <!-- Navbar -->
+  <nav class="bg-gray-800 shadow fixed w-full z-50 top-0 left-0">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="logopt.png" alt="Logo" class="h-5 w-auto mr-2 md:h-8" />
+<a href="index.html" class="hidden md:block font-bold text-sm md:text-lg" style="color:#7CE609;">PT. POTENSI KARYA MANDIRI</a>
+
+      </div>
+      <div class="flex items-center space-x-2">
+        <!-- Tombol Ganti Mode -->
+        <button id="mode-toggle" class="bg-gray-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
+        <span id="mode-text">Mode Terang</span>
+      </button>
+        <button id="mobile-menu-button" class="md:hidden text-white text-2xl">☰</button>
+      </div>
+      <ul class="hidden md:flex space-x-4 text-xs md:text-sm">
+        <li><a href="index.html" class="text-gray-300 hover:text-green-400 transition">Home</a></li>
+        <li><a href="galeri.html" class="text-gray-300 hover:text-green-400 transition">Galeri</a></li>
+        <li><a href="sertifikat.html" class="text-gray-300 hover:text-green-400 transition">Sertifikat</a></li>
+        <li><a href="clients.html" class="text-gray-300 hover:text-green-400 transition">Klien</a></li>
+        <li><a href="deals.html" class="text-gray-300 hover:text-green-400 transition">Deals</a></li>
+        <li><a href="partner.html" class="text-gray-300 hover:text-green-400 transition">Partner</a></li>
+      </ul>
+    </div>
+    <ul id="mobile-menu" class="md:hidden hidden flex-col px-4 pb-4 text-sm space-y-2">
+      <li><a href="index.html" class="block text-gray-300 hover:text-green-400 transition">Home</a></li>
+      <li><a href="galeri.html" class="block text-gray-300 hover:text-green-400 transition">Galeri</a></li>
+      <li><a href="sertifikat.html" class="block text-gray-300 hover:text-green-400 transition">Sertifikat</a></li>
+      <li><a href="clients.html" class="block text-gray-300 hover:text-green-400 transition">Klien</a></li>
+      <li><a href="deals.html" class="block text-gray-300 hover:text-green-400 transition">Deals</a></li>
+      <li><a href="partner.html" class="block text-gray-300 hover:text-green-400 transition">Partner</a></li>
+    </ul>
+  </nav>
+
+    <div class="pt-20"></div>
+<div data-aos="fade-up">
+    <!-- Sertifikat Section -->
+    <section class="py-20 px-8 md:px-20 bg-gray-900">
+        <h2 class="text-3xl font-bold mb-10 text-center">Sertifikat</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                <img src="s1.jpg" alt="Sertifikat 1" class="w-full h-48 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Sertifikat 1</h3>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                <img src="s2.png" alt="Sertifikat 2" class="w-full h-48 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Sertifikat 2</h3>
+            </div>
+            <div class="bg-gray-800 p-4 rounded-lg shadow-lg">
+                <img src="s3.png" alt="Sertifikat 3" class="w-full h-48 object-cover rounded">
+                <h3 class="text-xl font-semibold mt-2">Sertifikat 3</h3>
+            </div>
+            <!-- Tambahkan lebih banyak sertifikat sesuai kebutuhan -->
+        </div>
+    </section>
+</div>
+ <br>
+<br>
+<br>
+<br>
+    <!-- Footer -->
+<footer class="bg-gray-800 text-gray-200 py-6 mt-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center">
+        <p class="text-sm text-center mb-4">&copy; 2025 All rights reserved.</p>
+        <!-- <div class="flex flex-col md:flex-row justify-center">
+            <div class="flex flex-col items-center mb-2 md:mb-0 md:mr-4">
+                <a href="index.html" class="hover:underline transition duration-200">Home</a>
+                <a href="galeri.html" class="hover:underline transition duration-200">Galeri</a>
+                <a href="sertifikat.html" class="hover:underline transition duration-200">Sertifikat</a>
+            </div>
+            <div class="flex flex-col items-center mb-2 md:mb-0">
+                <a href="clients.html" class="hover:underline transition duration-200">Klien</a>
+                <a href="deals.html" class="hover:underline transition duration-200">Deals</a>
+                <a href="partner.html" class="hover:underline transition duration-200">Partner</a>
+            </div>
+        </div>
+    </div> -->
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      const modeToggle = document.getElementById('mode-toggle');
+      const body = document.body;
+      const modeText = document.getElementById('mode-text');
+
+      // Set mode awal dari localStorage
+      if (localStorage.getItem('theme') === 'light') {
+        body.classList.add('light-mode');
+        modeText.textContent = 'Mode Gelap';
+      } else {
+        modeText.textContent = 'Mode Terang';
+      }
+
+      // Event klik toggle mode
+      modeToggle.addEventListener('click', () => {
+        body.classList.toggle('light-mode');
+        if (body.classList.contains('light-mode')) {
+          modeText.textContent = 'Mode Gelap';
+          localStorage.setItem('theme', 'light');
+        } else {
+          modeText.textContent = 'Mode Terang';
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+
+      document.getElementById("mobile-menu-button").addEventListener("click", function () {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      });
+    </script>
+</body>
+</html>
